@@ -16,9 +16,10 @@ spec:
     spec:
       containers:
       - name: webapp
-        image: nanajanashia/k8s-demo-app:v1.0
+        image: aanchannu/my-app-for-class:1.0
+        imagePullPolicy: Always
         ports:
-        - containerPort: 3000
+        - containerPort: 4000
         env:
         - name: USER_NAME
           valueFrom:
@@ -46,6 +47,6 @@ spec:
     app: webapp
   ports:
     - protocol: TCP
-      port: 3000
-      targetPort: 3000
+      port: 4000
+      targetPort: 4000
       nodePort: 30100
